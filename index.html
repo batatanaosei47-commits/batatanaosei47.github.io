@@ -1,20 +1,20 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>SlimFit — Emagrecimento Inteligente</title>
+<title>SlimFit — Transformação Saudável</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- FONTES -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Anton&display=swap" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box}
 body{
   margin:0;
-  background:#0b0b0b;
+  background:#0a0a0a;
   color:#eaeaea;
-  font-family:'Poppins', sans-serif;
+  font-family:'Inter', sans-serif;
 }
 .container{
   max-width:1200px;
@@ -25,29 +25,26 @@ body{
 /* HERO */
 .hero{
   background:
-    linear-gradient(120deg, rgba(0,0,0,.85), rgba(0,0,0,.5)),
+    linear-gradient(120deg, rgba(0,0,0,.9), rgba(0,0,0,.4)),
     url('https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=1600');
   background-size:cover;
   background-position:center;
-  border-radius:20px;
+  border-radius:22px;
   padding:140px 30px;
   text-align:center;
-  box-shadow:0 0 60px rgba(230,126,34,.25);
 }
 .hero h1{
-  font-family:'Bebas Neue', sans-serif;
-  font-size:64px;
+  font-family:'Anton', sans-serif;
+  font-size:68px;
   letter-spacing:2px;
   margin-bottom:25px;
 }
-.hero span{
-  color:#ff8c1a;
-}
+.hero span{ color:#ff8c1a }
 .hero p{
   font-size:20px;
-  max-width:700px;
+  max-width:720px;
   margin:auto;
-  color:#ccc;
+  color:#cfcfcf;
 }
 
 /* BOTÃO */
@@ -55,105 +52,97 @@ body{
   display:inline-block;
   margin-top:45px;
   padding:22px 55px;
-  background:linear-gradient(45deg,#ff8c1a,#ff5500);
+  background:linear-gradient(45deg,#ff8c1a,#ff4d00);
   color:#000;
   text-decoration:none;
   font-size:22px;
   font-weight:800;
   border-radius:14px;
-  box-shadow:0 0 30px rgba(255,140,26,.6);
+  box-shadow:0 0 35px rgba(255,140,26,.6);
   transition:.3s;
   animation:pulse 1.4s infinite;
 }
-.btn:hover{
-  transform:scale(1.07);
-}
+.btn:hover{ transform:scale(1.08) }
 
 /* SEÇÕES */
 .section{
   margin-top:70px;
-  padding:55px 45px;
-  background:#121212;
-  border-radius:20px;
-  box-shadow:0 0 40px rgba(0,0,0,.8);
 }
 .section h2{
   text-align:center;
-  font-size:40px;
-  margin-bottom:35px;
+  font-size:38px;
+  margin-bottom:40px;
   color:#ff8c1a;
-  font-weight:900;
+  font-weight:800;
 }
 
-/* BENEFÍCIOS */
-.benefits ul{
-  list-style:none;
-  padding:0;
-  font-size:21px;
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
-.benefits li{
-  margin-bottom:22px;
+.card{
+  padding:35px;
+  border-radius:18px;
+  font-size:18px;
+  line-height:1.5;
+  box-shadow:0 0 30px rgba(0,0,0,.7);
 }
-.benefits li::before{
-  content:"🔥 ";
-  color:#ff8c1a;
-  font-weight:900;
-}
+.orange{ background:linear-gradient(135deg,#ff8c1a,#ff5500); color:#000 }
+.green{ background:linear-gradient(135deg,#2ecc71,#1abc9c); color:#000 }
+.blue{ background:linear-gradient(135deg,#3498db,#2980b9); color:#fff }
+.purple{ background:linear-gradient(135deg,#9b59b6,#8e44ad); color:#fff }
 
 /* IMAGEM */
 .image img{
   width:100%;
-  border-radius:20px;
-  box-shadow:0 0 50px rgba(255,140,26,.3);
+  border-radius:22px;
+  box-shadow:0 0 50px rgba(255,140,26,.35);
 }
 
-/* DEPOIMENTOS */
-.testimonial{
-  display:flex;
-  gap:25px;
-  background:#1a1a1a;
-  padding:30px;
-  border-radius:18px;
-  margin-bottom:25px;
-  border-left:6px solid #ff8c1a;
+/* LISTAS */
+.list{
+  max-width:800px;
+  margin:auto;
+  font-size:20px;
 }
-.testimonial img{
-  width:90px;
-  height:90px;
-  border-radius:50%;
-  object-fit:cover;
+.list li{
+  margin-bottom:18px;
 }
-.testimonial p{
-  margin:0;
-  font-style:italic;
-  color:#ddd;
+.list li::before{
+  content:"✔ ";
+  color:#ff8c1a;
+  font-weight:800;
 }
 
 /* PREÇO */
-.price{
+.offer{
+  background:#111;
+  padding:60px 30px;
+  border-radius:25px;
   text-align:center;
-  font-size:46px;
+  box-shadow:0 0 50px rgba(0,0,0,.9);
+}
+.price{
+  font-size:48px;
   font-weight:900;
   color:#ff3c00;
 }
 .bonus{
   margin-top:25px;
-  background:linear-gradient(45deg,#ff8c1a,#ff5500);
+  background:linear-gradient(45deg,#ff8c1a,#ff4d00);
   padding:20px;
-  text-align:center;
   font-weight:800;
   border-radius:14px;
   color:#000;
 }
-
-/* URGÊNCIA */
 .countdown{
   margin-top:30px;
   background:#ff3c00;
   color:#000;
   padding:20px;
   font-size:22px;
-  text-align:center;
   border-radius:14px;
   font-weight:800;
 }
@@ -167,7 +156,7 @@ body{
 
 @media(max-width:768px){
   .hero h1{font-size:42px}
-  .section h2{font-size:30px}
+  .section h2{font-size:28px}
   .price{font-size:34px}
 }
 </style>
@@ -178,48 +167,55 @@ body{
 
 <!-- HERO -->
 <section class="hero">
-  <h1>EMAGREÇA COM <span>INTELIGÊNCIA</span></h1>
-  <p>Chega de dietas impossíveis. Um método prático, acessível e sustentável para transformar seu corpo e sua rotina.</p>
+  <h1>EMAGREÇA COM <span>CONTROLE</span></h1>
+  <p>Um método simples e inteligente para perder peso, melhorar sua rotina e manter resultados reais.</p>
   <a href="#oferta" class="btn">COMEÇAR AGORA</a>
 </section>
 
-<!-- BENEFÍCIOS -->
-<section class="section benefits">
-  <h2>O Que Você Vai Desbloquear</h2>
-  <ul>
-    <li>Perda de peso saudável e contínua</li>
-    <li>Mais energia e foco todos os dias</li>
-    <li>Plano simples, sem sofrimento</li>
-    <li>Resultados que permanecem</li>
-  </ul>
+<!-- O QUE VOCÊ GANHA -->
+<section class="section">
+  <h2>O Que Você Ganha Com o SlimFit</h2>
+  <div class="cards">
+    <div class="card orange">🔥 Controle total sobre sua alimentação sem dietas extremas.</div>
+    <div class="card green">⚡ Mais energia, disposição e leveza no dia a dia.</div>
+    <div class="card blue">📉 Redução gradual de peso de forma saudável.</div>
+    <div class="card purple">🧠 Consciência alimentar para manter os resultados.</div>
+  </div>
 </section>
 
 <!-- IMAGEM -->
 <section class="section image">
-  <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Corpo saudável">
+  <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=1400">
 </section>
 
-<!-- DEPOIMENTOS -->
+<!-- PRA QUEM É -->
 <section class="section">
-  <h2>Pessoas Reais. Resultados Reais.</h2>
+  <h2>Esse Método É Para Você Se:</h2>
+  <ul class="list">
+    <li>Já tentou emagrecer e não conseguiu manter o resultado</li>
+    <li>Quer algo simples e possível de seguir</li>
+    <li>Não aguenta mais dietas malucas</li>
+    <li>Busca mudança real de hábitos</li>
+  </ul>
+</section>
 
-  <div class="testimonial">
-    <img src="https://randomuser.me/api/portraits/women/68.jpg">
-    <p>“Nunca pensei que emagrecer poderia ser tão simples. Mudou minha rotina.” — Ana S.</p>
-  </div>
-
-  <div class="testimonial">
-    <img src="https://randomuser.me/api/portraits/men/45.jpg">
-    <p>“Visualmente e fisicamente outra pessoa. Método absurdo de bom.” — Carlos M.</p>
+<!-- O QUE VOCÊ RECEBE -->
+<section class="section">
+  <h2>O Que Você Recebe</h2>
+  <div class="cards">
+    <div class="card green">📘 Ebook SlimFit completo</div>
+    <div class="card blue">🥗 Guia prático de refeições</div>
+    <div class="card orange">📆 Organização simples para o dia a dia</div>
+    <div class="card purple">🎁 Ebook bônus de receitas saudáveis</div>
   </div>
 </section>
 
 <!-- OFERTA -->
-<section class="section" id="oferta">
+<section class="section offer" id="oferta">
   <div class="price">R$ 19,90</div>
-  <div class="bonus">🎁 Bônus: Receitas Saudáveis + Garantia 7 Dias</div>
+  <div class="bonus">🎁 Bônus + Garantia de 7 dias</div>
   <a href="https://pay.cakto.com.br/uz3ny5n_713376" class="btn">QUERO MEU ACESSO</a>
-  <div class="countdown" id="countdown">⏳ Oferta acaba em breve</div>
+  <div class="countdown" id="countdown">⏳ Oferta por tempo limitado</div>
 </section>
 
 </div>
@@ -239,3 +235,4 @@ setInterval(()=>{
 
 </body>
 </html>
+
