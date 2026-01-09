@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -6,76 +6,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f4f4f4; }
-  .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-  
+  body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f4f4f4; line-height:1.6; }
+  .container { max-width: 1000px; margin:0 auto; padding:20px; }
+
   /* Banner */
-  .banner { background: url('https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?auto=compress&cs=tinysrgb&w=1200') no-repeat center/cover; height: 400px; display:flex; align-items:center; justify-content:center; color:#fff; text-align:center; border-radius:10px; margin-top:30px; }
-  .banner h1 { font-size: 48px; background: rgba(0,0,0,0.5); padding: 20px; border-radius:10px; }
-  
-  /* Sessão de Benefícios */
-  .section { background:#fff; padding:40px 30px; margin-top:30px; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.1); }
-  .section h2 { color:#e67e22; text-align:center; font-size:32px; margin-bottom:20px; }
-  .benefits ul { list-style:none; padding:0; font-size:18px; }
-  .benefits ul li { margin-bottom:15px; }
-  .benefits ul li::before { content:'✅'; margin-right:10px; color:#2ecc71; }
+  .banner { 
+    background: url('https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?auto=compress&cs=tinysrgb&w=1200') no-repeat center/cover; 
+    height: 500px; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    color:#fff; 
+    text-align:center; 
+    border-radius:10px;
+    margin-bottom:40px;
+    position:relative;
+  }
+  .banner h1 { 
+    font-size: 48px; 
+    background: rgba(0,0,0,0.6); 
+    padding: 25px; 
+    border-radius:15px; 
+    line-height:1.2;
+  }
 
-  /* Depoimentos */
-  .testimonial { background:#f9f9f9; padding:20px; margin:15px 0; border-left:5px solid #2ecc71; font-style:italic; border-radius:5px; }
+  /* Sections */
+  .section { background:#fff; padding:40px 30px; margin-bottom:40px; border-radius:10px; box-shadow:0 0 20px rgba(0,0,0,0.1); }
+  .section h2 { color:#e67e22; text-align:center; font-size:36px; margin-bottom:20px; }
 
-  /* Preço e CTA */
-  .price { text-align:center; font-size:32px; color:#e74c3c; font-weight:bold; margin-top:20px; }
-  .bonus { background:#f1c40f; padding:15px; text-align:center; font-weight:bold; border-radius:5px; margin-top:15px; }
-  .button { display:block; text-align:center; width:70%; margin:20px auto; padding:20px; background:#e67e22; color:#fff; font-size:22px; text-decoration:none; border-radius:10px; font-weight:bold; transition:0.3s; }
+  /* Benefits */
+  .benefits ul { list-style:none; padding:0; font-size:20px; }
+  .benefits ul li { margin-bottom:15px; display:flex; align-items:center; }
+  .benefits ul li::before { content:'✅'; margin-right:15px; color:#2ecc71; font-size:24px; }
+
+  /* Testimonials */
+  .testimonial { display:flex; align-items:center; margin:20px 0; background:#f9f9f9; padding:20px; border-left:5px solid #2ecc71; border-radius:5px; }
+  .testimonial img { width:80px; height:80px; border-radius:50%; margin-right:20px; object-fit:cover; }
+  .testimonial p { font-style:italic; margin:0; }
+
+  /* Price and bonus */
+  .price { text-align:center; font-size:36px; color:#e74c3c; font-weight:bold; margin-top:20px; }
+  .bonus { background:#f1c40f; padding:15px; text-align:center; font-weight:bold; border-radius:5px; margin-top:15px; font-size:18px; }
+  .button { display:block; text-align:center; width:70%; margin:20px auto; padding:20px; background:#e67e22; color:#fff; font-size:24px; text-decoration:none; border-radius:10px; font-weight:bold; transition:0.3s; }
   .button:hover { background:#d35400; }
 
-  /* Imagens intermediárias */
+  /* Image sections */
   .image { text-align:center; margin:30px 0; }
-  .image img { max-width:100%; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); }
+  .image img { max-width:100%; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.2); }
 
+  /* Countdown urgency */
+  .countdown { background:#e74c3c; color:#fff; text-align:center; padding:15px; font-size:20px; border-radius:5px; margin-top:20px; }
+
+  @media(max-width:768px) {
+    .banner h1 { font-size:32px; padding:15px; }
+    .section h2 { font-size:28px; }
+    .price { font-size:28px; }
+    .button { font-size:20px; padding:15px; width:80%; }
+  }
 </style>
 </head>
 <body>
 
 <div class="container">
-  
+
   <!-- Banner -->
   <div class="banner">
-    <h1>🔥 Emagreça Naturalmente e Transforme Seu Corpo!</h1>
+    <h1>🔥 Emagreça Naturalmente e Transforme Seu Corpo em Apenas 30 Dias!</h1>
   </div>
 
-  <!-- Benefícios -->
+  <!-- Benefits -->
   <div class="section benefits">
-    <h2>Por que escolher SlimFit?</h2>
+    <h2>Benefícios do Método SlimFit</h2>
     <ul>
       <li>Perda de peso saudável e duradoura</li>
-      <li>Mais energia e disposição</li>
-      <li>Método fácil de seguir no dia a dia</li>
-      <li>Resultados que você consegue manter</li>
+      <li>Mais energia e disposição todos os dias</li>
+      <li>Método fácil de seguir na rotina diária</li>
+      <li>Resultados reais que você consegue manter</li>
     </ul>
   </div>
 
-  <!-- Imagem intermediária -->
+  <!-- Image -->
   <div class="image">
     <img src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Transformação corporal">
   </div>
 
-  <!-- Depoimentos -->
+  <!-- Testimonials -->
   <div class="section">
     <h2>Depoimentos de quem já emagreceu</h2>
-    <div class="testimonial">“Segui o método e consegui perder 4kg em um mês sem sofrimento. Super recomendo!” – Ana S.</div>
-    <div class="testimonial">“Mais energia e resultados reais! Valeu cada centavo!” – Carlos M.</div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana S.">
+      <p>“Segui o método e consegui perder 4kg em um mês sem sofrimento. Super recomendo!” – Ana S.</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Carlos M.">
+      <p>“Mais energia e resultados reais! Valeu cada centavo!” – Carlos M.</p>
+    </div>
   </div>
 
-  <!-- Preço e Bônus -->
+  <!-- Price and CTA -->
   <div class="section">
     <div class="price">💰 Apenas R$19,90</div>
     <div class="bonus">🎁 Bônus: Ebook com receitas saudáveis + Garantia de 7 dias</div>
     <a href="https://pay.cakto.com.br/uz3ny5n_713376" class="button">Quero Emagrecer Agora!</a>
+    <div class="countdown" id="countdown">⏳ Oferta termina em 24:00:00</div>
   </div>
 
 </div>
 
+<script>
+  // Contagem regressiva 24h
+  let countdown = document.getElementById('countdown');
+  let endTime = new Date().getTime() + 24*60*60*1000; // 24h a partir de agora
+
+  setInterval(function(){
+    let now = new Date().getTime();
+    let distance = endTime - now;
+    let hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+    let minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+    let seconds = Math.floor((distance % (1000*60)) / 1000);
+    countdown.innerHTML = `⏳ Oferta termina em ${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+  },1000);
+</script>
+
 </body>
 </html>
-
