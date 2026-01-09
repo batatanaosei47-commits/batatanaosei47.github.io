@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>SlimFit — Emagrecimento Inteligente</title>
+<title>Desafio 30 Dias — Emagrecimento Saudável</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;800&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
@@ -12,8 +12,8 @@
 
 body{
   margin:0;
-  background:#0b0b0b;
-  color:#eaeaea;
+  background:#0a0a0a;
+  color:#f2f2f2;
   font-family:'Inter', sans-serif;
 }
 
@@ -23,51 +23,50 @@ body{
   padding:30px;
 }
 
-/* ANIMAÇÕES */
-.fade{opacity:0; animation:fade .9s ease forwards}
-.up{opacity:0; animation:up 1s ease forwards}
+/* ANIMAÇÕES DE ENTRADA */
+.fade{opacity:0;animation:fade .8s ease forwards}
+.up{opacity:0;animation:up 1s ease forwards}
 
-@keyframes fade{
-  to{opacity:1}
-}
+@keyframes fade{to{opacity:1}}
 @keyframes up{
-  from{opacity:0; transform:translateY(40px)}
-  to{opacity:1; transform:translateY(0)}
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
 /* HERO */
 .hero{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:60px;
+  gap:70px;
   align-items:center;
-  margin-top:60px;
+  margin-top:70px;
 }
 
 .hero h1{
   font-family:'Anton', sans-serif;
   font-size:64px;
   letter-spacing:2px;
-  margin-bottom:20px;
+  line-height:1.1;
+  margin-bottom:25px;
 }
-.hero span{color:#2ecc71}
+.hero span{color:#f1c40f}
 
 .hero p{
   font-size:20px;
-  color:#cfcfcf;
+  color:#dcdcdc;
   margin-bottom:40px;
 }
 
 .btn{
   display:inline-block;
-  padding:22px 50px;
-  background:linear-gradient(45deg,#2ecc71,#1abc9c);
+  padding:22px 55px;
+  background:linear-gradient(45deg,#f1c40f,#f39c12);
   color:#000;
   text-decoration:none;
   font-size:22px;
   font-weight:900;
   border-radius:16px;
-  box-shadow:0 0 35px rgba(46,204,113,.7);
+  box-shadow:0 0 35px rgba(241,196,15,.8);
   animation:pulse 1.3s infinite;
 }
 
@@ -75,29 +74,52 @@ body{
   50%{transform:scale(1.08)}
 }
 
-/* MOCKUP */
+/* MOCKUP 3D */
 .mockup{
   background:#111;
-  border-radius:28px;
-  padding:40px;
+  border-radius:30px;
+  padding:45px;
   text-align:center;
-  box-shadow:0 0 60px rgba(46,204,113,.25);
+  box-shadow:0 0 70px rgba(241,196,15,.25);
 }
 
-.mockup img{
+.ebook-3d{
   width:100%;
-  max-width:320px;
+  max-width:300px;
+  border-radius:18px;
+  transform:perspective(1000px) rotateY(-18deg);
+  box-shadow:
+    20px 20px 60px rgba(0,0,0,.8),
+    0 0 40px rgba(241,196,15,.35);
+  animation:float 3.5s ease-in-out infinite;
+  transition:.4s;
+  cursor:pointer;
+}
+
+.ebook-3d:hover{
+  transform:perspective(1000px) rotateY(0deg) scale(1.05);
+  box-shadow:0 0 60px rgba(241,196,15,.8);
+}
+
+@keyframes float{
+  0%{transform:perspective(1000px) rotateY(-18deg) translateY(0)}
+  50%{transform:perspective(1000px) rotateY(-18deg) translateY(-12px)}
+  100%{transform:perspective(1000px) rotateY(-18deg) translateY(0)}
+}
+
+.mockup-text{
+  margin-top:22px;
+  font-size:14px;
+  color:#aaa;
 }
 
 /* SEÇÕES */
-.section{
-  margin-top:110px;
-}
+.section{margin-top:120px}
 
 .section h2{
   text-align:center;
   font-size:38px;
-  color:#2ecc71;
+  color:#f1c40f;
   margin-bottom:50px;
   font-weight:800;
 }
@@ -116,17 +138,17 @@ body{
   font-family:'Sora', sans-serif;
   font-size:18px;
   line-height:1.6;
-  border:1px solid rgba(46,204,113,.25);
+  border:1px solid rgba(241,196,15,.25);
   transition:.3s;
 }
 .card:hover{
   transform:translateY(-8px);
-  border-color:#2ecc71;
+  border-color:#f1c40f;
 }
 
 /* LISTA */
 .list{
-  max-width:750px;
+  max-width:760px;
   margin:auto;
   font-size:20px;
 }
@@ -136,23 +158,23 @@ body{
 }
 .list li::before{
   content:"✔ ";
-  color:#2ecc71;
+  color:#f1c40f;
   font-weight:900;
 }
 
 /* OFERTA */
 .offer{
   background:#111;
-  padding:70px 30px;
-  border-radius:30px;
+  padding:75px 30px;
+  border-radius:34px;
   text-align:center;
-  border:1px solid rgba(46,204,113,.3);
+  border:1px solid rgba(241,196,15,.35);
 }
 
 .price{
   font-size:52px;
   font-weight:900;
-  color:#2ecc71;
+  color:#f1c40f;
 }
 
 .bonus{
@@ -163,35 +185,35 @@ body{
 
 /* CTA FINAL */
 .cta{
-  margin-top:120px;
-  padding:100px 30px;
-  background:radial-gradient(circle at top,#0f3d2e,#000);
-  border-radius:40px;
+  margin-top:140px;
+  padding:110px 30px;
+  background:radial-gradient(circle at top,#5a0f0f,#000);
+  border-radius:45px;
   text-align:center;
-  box-shadow:0 0 90px rgba(46,204,113,.45);
+  box-shadow:0 0 100px rgba(241,196,15,.5);
 }
 
 .cta h2{
   font-size:44px;
-  color:#2ecc71;
+  color:#f1c40f;
   margin-bottom:25px;
 }
 
 .cta p{
   font-size:20px;
   color:#ddd;
-  margin-bottom:50px;
+  margin-bottom:55px;
 }
 
 .cta a{
-  padding:28px 70px;
+  padding:30px 75px;
   font-size:26px;
   font-weight:900;
   border-radius:22px;
-  background:linear-gradient(45deg,#2ecc71,#1abc9c);
+  background:linear-gradient(45deg,#f1c40f,#f39c12);
   color:#000;
   text-decoration:none;
-  box-shadow:0 0 40px rgba(46,204,113,.9);
+  box-shadow:0 0 45px rgba(241,196,15,.9);
   animation:pulse 1.3s infinite;
 }
 
@@ -202,6 +224,7 @@ body{
   color:#aaa;
 }
 
+/* MOBILE */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;text-align:center}
   .hero h1{font-size:42px}
@@ -215,39 +238,41 @@ body{
 <!-- HERO -->
 <section class="hero fade">
   <div>
-    <h1 class="up">EMAGREÇA COM <span>CONTROLE</span></h1>
-    <p class="up">Um método simples, direto e possível de seguir para quem quer perder peso sem dietas extremas.</p>
+    <h1 class="up">DESAFIO <span>30 DIAS</span></h1>
+    <p class="up">
+      Um método simples e possível para quem quer emagrecer de forma saudável,
+      sem dietas extremas.
+    </p>
     <a href="#cta" class="btn up">COMEÇAR AGORA</a>
   </div>
 
   <div class="mockup up">
-    <!-- COLOCA A IMAGEM DO SEU EBOOK AQUI -->
-    <img src="capa-ebook.png" alt="Capa do Ebook SlimFit">
-    <p style="margin-top:20px;color:#aaa;font-size:14px">
-      📘 Acesso imediato após a compra
-    </p>
+    <a href="https://pay.cakto.com.br/uz3ny5n_713376">
+      <img src="capa-ebook.png" alt="Capa do Ebook Desafio 30 Dias" class="ebook-3d">
+    </a>
+    <p class="mockup-text">📘 Clique na capa para acessar agora</p>
   </div>
 </section>
 
 <!-- BENEFÍCIOS -->
 <section class="section up">
-  <h2>O Que Você Vai Ganhar</h2>
+  <h2>O Que Você Vai Conquistar</h2>
   <div class="cards">
     <div class="card">🔥 Controle alimentar sem sofrimento</div>
-    <div class="card">⚡ Mais energia e disposição</div>
+    <div class="card">⚡ Mais energia no dia a dia</div>
     <div class="card">📉 Emagrecimento gradual e real</div>
-    <div class="card">🧠 Hábitos que duram</div>
+    <div class="card">🧠 Hábitos que permanecem</div>
   </div>
 </section>
 
 <!-- PRA QUEM É -->
 <section class="section up">
-  <h2>Esse Ebook É Pra Você Se</h2>
+  <h2>Esse Desafio É Para Você Se</h2>
   <ul class="list">
     <li>Já tentou emagrecer várias vezes</li>
     <li>Quer algo simples de seguir</li>
     <li>Não aguenta mais dietas restritivas</li>
-    <li>Quer mudar de verdade</li>
+    <li>Quer mudança de verdade</li>
   </ul>
 </section>
 
@@ -257,10 +282,10 @@ body{
   <div class="bonus">✔ Ebook completo • ✔ Bônus extras • ✔ Garantia de 7 dias</div>
 </section>
 
-<!-- CTA -->
+<!-- CTA FINAL -->
 <section class="cta up" id="cta">
-  <h2>Comece Hoje</h2>
-  <p>Você não precisa esperar mais.<br>O acesso é imediato.</p>
+  <h2>Comece Hoje Mesmo</h2>
+  <p>Acesso imediato após a compra.<br>Sem risco.</p>
   <a href="https://pay.cakto.com.br/uz3ny5n_713376">
     QUERO MEU EBOOK AGORA
   </a>
@@ -270,4 +295,5 @@ body{
 </div>
 </body>
 </html>
+
 
