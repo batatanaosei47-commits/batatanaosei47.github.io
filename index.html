@@ -1,131 +1,292 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emagreça de Forma Simples</title>
+<title>SlimFit — Emagrecimento Inteligente</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONTES -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;800&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
-  body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  h1 {
-    font-size: 2em;
-    color: #00ff00;
-  }
-  h2 {
-    font-size: 1.2em;
-    color: #fff;
-    margin-bottom: 20px;
-  }
-  h3 {
-    color: #00ff00;
-    margin-top: 20px;
-  }
-  ul {
-    text-align: left;
-    list-style: none;
-    padding: 0;
-  }
-  ul li::before {
-    content: "✅ ";
-    color: #00ff00;
-  }
-  .button {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 20px 0;
-    font-size: 1.2em;
-    color: #000;
-    background-color: #00ff00;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-  }
-  .button:hover {
-    background-color: #00cc00;
-  }
-  .ebook-image {
-    max-width: 100%;
-    margin: 20px 0;
-    border-radius: 10px;
-  }
-  .section {
-    margin: 20px 0;
-  }
-  .highlight {
-    color: #00ff00;
-    font-weight: bold;
-  }
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:#0a0a0a;
+  color:#eaeaea;
+  font-family:'Inter', sans-serif;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:25px;
+}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(120deg,rgba(0,0,0,.9),rgba(0,0,0,.4)),
+    url('https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size:cover;
+  background-position:center;
+  border-radius:26px;
+  padding:150px 30px;
+  text-align:center;
+}
+
+.hero h1{
+  font-family:'Anton', sans-serif;
+  font-size:72px;
+  letter-spacing:2px;
+  margin-bottom:25px;
+}
+.hero span{color:#2ecc71}
+.hero p{
+  font-size:20px;
+  max-width:750px;
+  margin:auto;
+  color:#cfcfcf;
+}
+
+/* BOTÕES */
+.btn{
+  display:inline-block;
+  margin-top:45px;
+  padding:22px 55px;
+  background:linear-gradient(45deg,#ff8c1a,#ff4d00);
+  color:#000;
+  text-decoration:none;
+  font-size:22px;
+  font-weight:900;
+  border-radius:16px;
+  box-shadow:0 0 35px rgba(255,140,26,.6);
+  animation:pulse 1.4s infinite;
+}
+.btn:hover{transform:scale(1.08)}
+
+/* SEÇÕES */
+.section{margin-top:90px}
+.section h2{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:45px;
+  color:#ff8c1a;
+  font-weight:800;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  padding:36px;
+  border-radius:22px;
+  font-size:18px;
+  line-height:1.6;
+  box-shadow:0 0 30px rgba(0,0,0,.7);
+  font-family:'Sora', sans-serif;
+  font-weight:600;
+}
+
+/* cards de confiança */
+.card.safe{
+  font-family:'Inter', sans-serif;
+  font-size:17px;
+  font-weight:500;
+}
+.card.safe strong{
+  display:block;
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:6px;
+}
+
+/* CORES */
+.orange{background:linear-gradient(135deg,#ff8c1a,#ff5500);color:#000}
+.green{background:linear-gradient(135deg,#2ecc71,#1abc9c);color:#000}
+.blue{background:linear-gradient(135deg,#3498db,#2980b9);color:#fff}
+.purple{background:linear-gradient(135deg,#9b59b6,#8e44ad);color:#fff}
+
+/* IMAGEM */
+.image img{
+  width:100%;
+  border-radius:26px;
+  box-shadow:0 0 55px rgba(46,204,113,.35);
+}
+
+/* LISTA */
+.list{
+  max-width:850px;
+  margin:auto;
+  font-size:20px;
+}
+.list li{margin-bottom:18px}
+.list li::before{
+  content:"✔ ";
+  color:#2ecc71;
+  font-weight:800;
+}
+
+/* OFERTA */
+.offer{
+  background:#111;
+  padding:70px 30px;
+  border-radius:30px;
+  text-align:center;
+}
+.price{
+  font-size:48px;
+  font-weight:900;
+  color:#ff3c00;
+}
+.bonus{
+  margin-top:25px;
+  background:linear-gradient(45deg,#ff8c1a,#ff4d00);
+  padding:22px;
+  font-weight:800;
+  border-radius:16px;
+  color:#000;
+}
+
+/* CTA FINAL VERDE */
+.cta-final{
+  margin-top:120px;
+  padding:100px 30px;
+  background:radial-gradient(circle at top,#0f3d2e,#000);
+  text-align:center;
+  border-radius:34px;
+  box-shadow:0 0 90px rgba(46,204,113,.4);
+}
+
+.cta-final h2{
+  font-size:44px;
+  color:#2ecc71;
+  margin-bottom:20px;
+  font-weight:900;
+}
+
+.cta-final p{
+  font-size:20px;
+  color:#dcdcdc;
+  margin-bottom:50px;
+}
+
+.cta-btn{
+  display:inline-block;
+  padding:28px 70px;
+  font-size:26px;
+  font-weight:900;
+  color:#000;
+  text-decoration:none;
+  border-radius:20px;
+  background:linear-gradient(45deg,#2ecc71,#1abc9c);
+  box-shadow:
+    0 0 30px rgba(46,204,113,.9),
+    0 0 70px rgba(46,204,113,.6);
+  animation:ctaPulse 1.3s infinite;
+}
+
+.cta-sub{
+  display:block;
+  margin-top:30px;
+  font-size:15px;
+  color:#aaa;
+}
+
+/* ANIMAÇÕES */
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+@keyframes ctaPulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.1)}
+  100%{transform:scale(1)}
+}
+
+@media(max-width:768px){
+  .hero h1{font-size:42px}
+  .section h2{font-size:30px}
+  .cta-final h2{font-size:30px}
+}
 </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Emagreça de Forma Simples em 30 Dias</h1>
-    <h2>Guia prático com alimentação equilibrada, exercícios em casa e hábitos que funcionam na vida real</h2>
+<div class="container">
 
-    <img src="file:///C:/Users/luana/Downloads/Miniatura%20do%20youtube%20desafio%20emagrecimento%20saud%C3%A1vel%20simples%20em%20branco%20e%20amarelo.png" alt="Capa do ebook" class="ebook-image">
+<!-- HERO -->
+<section class="hero">
+  <h1>EMAGREÇA COM <span>CONTROLE</span></h1>
+  <p>Método simples, realista e sustentável para perder peso sem dietas extremas.</p>
+  <a href="#cta" class="btn">COMEÇAR AGORA</a>
+</section>
 
-    <div class="section">
-      <h3>Módulo 1 – Conceitos Fundamentais</h3>
-      <ul>
-        <li>Entenda como emagrecimento realmente acontece</li>
-        <li>Alimentação equilibrada + movimento regular + hábitos sustentáveis</li>
-        <li>O foco é no processo diário, não só no peso da balança</li>
-      </ul>
-    </div>
+<!-- BENEFÍCIOS -->
+<section class="section">
+  <h2>O Que Você Ganha</h2>
+  <div class="cards">
+    <div class="card orange">🔥 Controle alimentar sem loucura</div>
+    <div class="card green">⚡ Mais energia no dia a dia</div>
+    <div class="card blue">📉 Emagrecimento gradual</div>
+    <div class="card purple">🧠 Hábitos que permanecem</div>
+  </div>
+</section>
 
-    <div class="section">
-      <h3>Módulo 2 – Alimentação e Planejamento Prático</h3>
-      <ul>
-        <li>Cardápio diário: 3 exemplos fáceis de seguir</li>
-        <li>Substituições inteligentes: refrigerante → água com limão, pão branco → integral</li>
-        <li>Lista de compras essencial para 30 dias</li>
-        <li>Checklist diário: café, almoço, jantar equilibrados + água 2–3L</li>
-      </ul>
-    </div>
+<!-- IMAGEM -->
+<section class="section image">
+  <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=1400">
+</section>
 
-    <div class="section">
-      <h3>Módulo 3 – Exercícios e Hábitos</h3>
-      <ul>
-        <li>Rotina semanal simples: cardio, força, core, alongamento e descanso</li>
-        <li>Exercícios em casa: agachamento, flexão adaptada, prancha, elevação de quadril</li>
-        <li>Hábitos que aceleram resultados: sono 7–9h, hidratação 2–3L, alimentação consciente</li>
-        <li>Checklist diário e plano de 30 dias passo a passo</li>
-      </ul>
-    </div>
+<!-- PRA QUEM É -->
+<section class="section">
+  <h2>Esse Método É Para Você Se:</h2>
+  <ul class="list">
+    <li>Já tentou emagrecer e não conseguiu manter</li>
+    <li>Quer algo simples e possível</li>
+    <li>Não aguenta mais dietas extremas</li>
+    <li>Busca mudança real de hábitos</li>
+  </ul>
+</section>
 
-    <a href="https://pay.cakto.com.br/uz3ny5n_713376" class="button">Quero meu ebook por R$19,90</a>
+<!-- CONFIANÇA -->
+<section class="section">
+  <h2>Compra 100% Segura</h2>
+  <div class="cards">
+    <div class="card orange safe"><strong>🔒 Pagamento Seguro</strong>Plataforma confiável</div>
+    <div class="card green safe"><strong>✅ Garantia de 7 Dias</strong>Risco zero</div>
+    <div class="card blue safe"><strong>📱 Acesso Imediato</strong>Após o pagamento</div>
+    <div class="card purple safe"><strong>💬 Suporte Inicial</strong>Para começar certo</div>
+  </div>
+</section>
 
-    <div class="section">
-      <h3>O que você vai receber:</h3>
-      <ul>
-        <li>Guia completo de 30 dias</li>
-        <li>Cardápio e substituições inteligentes</li>
-        <li>Exercícios simples para casa + rotina semanal</li>
-        <li>Checklist diário e plano de evolução contínua</li>
-        <li>Acesso imediato após a compra via link do Drive</li>
-      </ul>
-    </div>
+<!-- OFERTA -->
+<section class="section offer">
+  <div class="price">R$ 19,90</div>
+  <div class="bonus">🎁 Ebook + Bônus + Garantia de 7 dias</div>
+</section>
 
-    <div class="section">
-      <h3>Depoimentos:</h3>
-      <p>“Segui o plano e já notei diferença em 2 semanas!”</p>
-      <p>“Muito fácil de aplicar, adorei!”</p>
-    </div>
+<!-- CTA FINAL -->
+<section class="cta-final" id="cta">
+  <h2>Comece Sua Transformação Agora</h2>
+  <p>Acesso imediato ao método SlimFit.<br>Simples, direto e possível.</p>
+  <a href="https://pay.cakto.com.br/uz3ny5n_713376" class="cta-btn">
+    QUERO MEU EBOOK AGORA
+  </a>
+  <span class="cta-sub">🔒 Compra segura • 📱 Acesso imediato • ✅ Garantia</span>
+</section>
 
-    <div class="section">
-      <h2>Comece hoje e transforme sua rotina!</h2>
-    </div>
+</div>
+</body>
+</html>
+
   </div>
 </body>
 </html>
