@@ -1,158 +1,174 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>SlimFit — Emagrecimento Saudável</title>
+<title>SlimFit — Emagrecimento Inteligente</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+<!-- FONTES -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 
 <style>
+*{box-sizing:border-box}
 body{
-  font-family:'Montserrat', sans-serif;
   margin:0;
-  background:#f5f6fa;
-  color:#333;
+  background:#0b0b0b;
+  color:#eaeaea;
+  font-family:'Poppins', sans-serif;
 }
 .container{
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
-  padding:20px;
+  padding:25px;
 }
 
 /* HERO */
 .hero{
   background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url('https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?auto=compress&cs=tinysrgb&w=1400');
+    linear-gradient(120deg, rgba(0,0,0,.85), rgba(0,0,0,.5)),
+    url('https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=1600');
   background-size:cover;
   background-position:center;
-  padding:120px 20px;
-  border-radius:15px;
+  border-radius:20px;
+  padding:140px 30px;
   text-align:center;
-  color:#fff;
+  box-shadow:0 0 60px rgba(230,126,34,.25);
 }
 .hero h1{
-  font-size:46px;
-  font-weight:800;
-  margin-bottom:20px;
+  font-family:'Bebas Neue', sans-serif;
+  font-size:64px;
+  letter-spacing:2px;
+  margin-bottom:25px;
+}
+.hero span{
+  color:#ff8c1a;
 }
 .hero p{
   font-size:20px;
   max-width:700px;
   margin:auto;
+  color:#ccc;
 }
 
 /* BOTÃO */
 .btn{
   display:inline-block;
-  margin-top:35px;
-  padding:20px 45px;
-  background:#e67e22;
-  color:#fff;
+  margin-top:45px;
+  padding:22px 55px;
+  background:linear-gradient(45deg,#ff8c1a,#ff5500);
+  color:#000;
   text-decoration:none;
   font-size:22px;
-  font-weight:700;
-  border-radius:12px;
+  font-weight:800;
+  border-radius:14px;
+  box-shadow:0 0 30px rgba(255,140,26,.6);
   transition:.3s;
-  animation:pulse 1.5s infinite;
+  animation:pulse 1.4s infinite;
 }
-.btn:hover{ background:#d35400 }
+.btn:hover{
+  transform:scale(1.07);
+}
 
 /* SEÇÕES */
 .section{
-  background:#fff;
-  margin-top:50px;
-  padding:45px 35px;
-  border-radius:15px;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  margin-top:70px;
+  padding:55px 45px;
+  background:#121212;
+  border-radius:20px;
+  box-shadow:0 0 40px rgba(0,0,0,.8);
 }
 .section h2{
   text-align:center;
-  font-size:34px;
-  margin-bottom:30px;
-  color:#e67e22;
+  font-size:40px;
+  margin-bottom:35px;
+  color:#ff8c1a;
+  font-weight:900;
 }
 
 /* BENEFÍCIOS */
 .benefits ul{
   list-style:none;
   padding:0;
-  font-size:20px;
+  font-size:21px;
 }
 .benefits li{
-  margin-bottom:18px;
+  margin-bottom:22px;
 }
 .benefits li::before{
-  content:"✔ ";
-  color:#27ae60;
-  font-weight:800;
+  content:"🔥 ";
+  color:#ff8c1a;
+  font-weight:900;
 }
 
 /* IMAGEM */
 .image img{
   width:100%;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  border-radius:20px;
+  box-shadow:0 0 50px rgba(255,140,26,.3);
 }
 
 /* DEPOIMENTOS */
 .testimonial{
   display:flex;
-  gap:20px;
-  background:#f9f9f9;
-  padding:25px;
-  border-radius:12px;
-  margin-bottom:20px;
-  border-left:6px solid #2ecc71;
+  gap:25px;
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:18px;
+  margin-bottom:25px;
+  border-left:6px solid #ff8c1a;
 }
 .testimonial img{
-  width:85px;
-  height:85px;
+  width:90px;
+  height:90px;
   border-radius:50%;
+  object-fit:cover;
 }
 .testimonial p{
   margin:0;
   font-style:italic;
+  color:#ddd;
 }
 
 /* PREÇO */
 .price{
   text-align:center;
-  font-size:40px;
-  font-weight:800;
-  color:#e74c3c;
+  font-size:46px;
+  font-weight:900;
+  color:#ff3c00;
 }
 .bonus{
-  margin-top:20px;
-  background:#f1c40f;
-  padding:18px;
+  margin-top:25px;
+  background:linear-gradient(45deg,#ff8c1a,#ff5500);
+  padding:20px;
   text-align:center;
-  font-weight:700;
-  border-radius:10px;
+  font-weight:800;
+  border-radius:14px;
+  color:#000;
 }
 
 /* URGÊNCIA */
 .countdown{
-  margin-top:25px;
-  background:#e74c3c;
-  color:#fff;
-  padding:18px;
+  margin-top:30px;
+  background:#ff3c00;
+  color:#000;
+  padding:20px;
   font-size:22px;
   text-align:center;
-  border-radius:10px;
+  border-radius:14px;
+  font-weight:800;
 }
 
-/* ANIMAÇÕES */
+/* ANIMAÇÃO */
 @keyframes pulse{
-  0%{ transform:scale(1) }
-  50%{ transform:scale(1.05) }
-  100%{ transform:scale(1) }
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
 }
 
 @media(max-width:768px){
-  .hero h1{ font-size:32px }
-  .hero p{ font-size:18px }
-  .price{ font-size:30px }
+  .hero h1{font-size:42px}
+  .section h2{font-size:30px}
+  .price{font-size:34px}
 }
 </style>
 </head>
@@ -162,68 +178,64 @@ body{
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Emagreça de Forma Saudável<br>Sem Dietas Malucas</h1>
-  <p>Um método simples, acessível e realista para quem quer perder peso, ganhar mais energia e manter os resultados.</p>
-  <a href="#oferta" class="btn">Quero Começar Agora</a>
+  <h1>EMAGREÇA COM <span>INTELIGÊNCIA</span></h1>
+  <p>Chega de dietas impossíveis. Um método prático, acessível e sustentável para transformar seu corpo e sua rotina.</p>
+  <a href="#oferta" class="btn">COMEÇAR AGORA</a>
 </section>
 
 <!-- BENEFÍCIOS -->
 <section class="section benefits">
-  <h2>O Que Você Vai Conquistar</h2>
+  <h2>O Que Você Vai Desbloquear</h2>
   <ul>
-    <li>Redução gradual e saudável de peso</li>
-    <li>Mais disposição no dia a dia</li>
-    <li>Rotina simples e fácil de seguir</li>
-    <li>Hábitos que você consegue manter</li>
+    <li>Perda de peso saudável e contínua</li>
+    <li>Mais energia e foco todos os dias</li>
+    <li>Plano simples, sem sofrimento</li>
+    <li>Resultados que permanecem</li>
   </ul>
 </section>
 
 <!-- IMAGEM -->
-<section class="image section">
-  <img src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Transformação saudável">
+<section class="section image">
+  <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Corpo saudável">
 </section>
 
 <!-- DEPOIMENTOS -->
 <section class="section">
-  <h2>Resultados de Pessoas Reais</h2>
+  <h2>Pessoas Reais. Resultados Reais.</h2>
 
   <div class="testimonial">
     <img src="https://randomuser.me/api/portraits/women/68.jpg">
-    <p>“Consegui emagrecer com equilíbrio e sem sofrimento. O método é simples e funciona.” — Ana S.</p>
+    <p>“Nunca pensei que emagrecer poderia ser tão simples. Mudou minha rotina.” — Ana S.</p>
   </div>
 
   <div class="testimonial">
     <img src="https://randomuser.me/api/portraits/men/45.jpg">
-    <p>“Mais energia, mais confiança e hábitos melhores. Recomendo demais.” — Carlos M.</p>
+    <p>“Visualmente e fisicamente outra pessoa. Método absurdo de bom.” — Carlos M.</p>
   </div>
 </section>
 
 <!-- OFERTA -->
 <section class="section" id="oferta">
   <div class="price">R$ 19,90</div>
-  <div class="bonus">🎁 Bônus: Receitas Saudáveis + Garantia de 7 dias</div>
-  <a href="https://pay.cakto.com.br/uz3ny5n_713376" class="btn">Quero Emagrecer Agora</a>
-  <div class="countdown" id="countdown">⏳ Oferta por tempo limitado</div>
+  <div class="bonus">🎁 Bônus: Receitas Saudáveis + Garantia 7 Dias</div>
+  <a href="https://pay.cakto.com.br/uz3ny5n_713376" class="btn">QUERO MEU ACESSO</a>
+  <div class="countdown" id="countdown">⏳ Oferta acaba em breve</div>
 </section>
 
 </div>
 
 <script>
-let end = new Date().getTime() + 24*60*60*1000;
-let el = document.getElementById("countdown");
-
+let end=new Date().getTime()+24*60*60*1000;
+let c=document.getElementById("countdown");
 setInterval(()=>{
-  let now = new Date().getTime();
-  let d = end - now;
-  let h = Math.floor(d/(1000*60*60));
-  let m = Math.floor((d%(1000*60*60))/(1000*60));
-  let s = Math.floor((d%(1000*60))/1000);
-  el.innerHTML = `⏳ Oferta termina em ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  let n=new Date().getTime();
+  let d=end-n;
+  let h=Math.floor(d/(1000*60*60));
+  let m=Math.floor((d%(1000*60*60))/(1000*60));
+  let s=Math.floor((d%(1000*60))/1000);
+  c.innerHTML=`⏳ Oferta termina em ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
 },1000);
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
