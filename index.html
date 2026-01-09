@@ -5,7 +5,6 @@
 <title>SlimFit — Emagrecimento Inteligente</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- FONTES -->
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;800&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
@@ -26,9 +25,8 @@ body{
 
 /* HERO */
 .hero{
-  background:
-    linear-gradient(120deg, rgba(0,0,0,.9), rgba(0,0,0,.4)),
-    url('https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background:linear-gradient(120deg,rgba(0,0,0,.9),rgba(0,0,0,.4)),
+  url('https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=1600');
   background-size:cover;
   background-position:center;
   border-radius:24px;
@@ -40,11 +38,8 @@ body{
   font-family:'Anton', sans-serif;
   font-size:70px;
   letter-spacing:2px;
-  margin-bottom:25px;
 }
-
-.hero span{ color:#ff8c1a }
-
+.hero span{color:#ff8c1a}
 .hero p{
   font-size:20px;
   max-width:720px;
@@ -64,16 +59,12 @@ body{
   font-weight:800;
   border-radius:14px;
   box-shadow:0 0 35px rgba(255,140,26,.6);
-  transition:.3s;
   animation:pulse 1.4s infinite;
 }
-.btn:hover{ transform:scale(1.08) }
+.btn:hover{transform:scale(1.08)}
 
 /* SEÇÕES */
-.section{
-  margin-top:80px;
-}
-
+.section{margin-top:80px}
 .section h2{
   text-align:center;
   font-size:38px;
@@ -89,6 +80,7 @@ body{
   gap:25px;
 }
 
+/* cards normais */
 .card{
   padding:35px;
   border-radius:20px;
@@ -99,10 +91,24 @@ body{
   font-weight:600;
 }
 
-.orange{ background:linear-gradient(135deg,#ff8c1a,#ff5500); color:#000 }
-.green{ background:linear-gradient(135deg,#2ecc71,#1abc9c); color:#000 }
-.blue{ background:linear-gradient(135deg,#3498db,#2980b9); color:#fff }
-.purple{ background:linear-gradient(135deg,#9b59b6,#8e44ad); color:#fff }
+/* cards finais (confiança) */
+.card.safe{
+  font-family:'Inter', sans-serif;
+  font-size:17px;
+  font-weight:500;
+}
+.card.safe strong{
+  display:block;
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:6px;
+}
+
+/* CORES */
+.orange{background:linear-gradient(135deg,#ff8c1a,#ff5500);color:#000}
+.green{background:linear-gradient(135deg,#2ecc71,#1abc9c);color:#000}
+.blue{background:linear-gradient(135deg,#3498db,#2980b9);color:#fff}
+.purple{background:linear-gradient(135deg,#9b59b6,#8e44ad);color:#fff}
 
 /* IMAGEM */
 .image img{
@@ -111,17 +117,13 @@ body{
   box-shadow:0 0 50px rgba(255,140,26,.35);
 }
 
-/* LISTAS */
+/* LISTA */
 .list{
   max-width:850px;
   margin:auto;
   font-size:20px;
 }
-
-.list li{
-  margin-bottom:18px;
-}
-
+.list li{margin-bottom:18px}
 .list li::before{
   content:"✔ ";
   color:#ff8c1a;
@@ -134,15 +136,12 @@ body{
   padding:65px 30px;
   border-radius:30px;
   text-align:center;
-  box-shadow:0 0 60px rgba(0,0,0,.9);
 }
-
 .price{
   font-size:48px;
   font-weight:900;
   color:#ff3c00;
 }
-
 .bonus{
   margin-top:25px;
   background:linear-gradient(45deg,#ff8c1a,#ff4d00);
@@ -151,7 +150,6 @@ body{
   border-radius:14px;
   color:#000;
 }
-
 .countdown{
   margin-top:30px;
   background:#ff3c00;
@@ -162,17 +160,10 @@ body{
   font-weight:800;
 }
 
-/* ANIMAÇÃO */
 @keyframes pulse{
   0%{transform:scale(1)}
   50%{transform:scale(1.08)}
   100%{transform:scale(1)}
-}
-
-@media(max-width:768px){
-  .hero h1{font-size:42px}
-  .section h2{font-size:28px}
-  .price{font-size:34px}
 }
 </style>
 </head>
@@ -180,76 +171,48 @@ body{
 <body>
 <div class="container">
 
-<!-- HERO -->
 <section class="hero">
   <h1>EMAGREÇA COM <span>CONTROLE</span></h1>
-  <p>Um método simples e realista para perder peso, melhorar sua relação com a comida e manter resultados possíveis.</p>
+  <p>Método simples, realista e sustentável para perder peso sem dietas extremas.</p>
   <a href="#oferta" class="btn">COMEÇAR AGORA</a>
 </section>
 
-<!-- O QUE VOCÊ GANHA -->
 <section class="section">
-  <h2>O Que Você Ganha Com o SlimFit</h2>
+  <h2>O Que Você Ganha</h2>
   <div class="cards">
-    <div class="card orange">🔥 Controle alimentar sem dietas extremas</div>
-    <div class="card green">⚡ Mais energia e menos cansaço no dia a dia</div>
-    <div class="card blue">📉 Redução gradual de peso de forma saudável</div>
-    <div class="card purple">🧠 Hábitos que você consegue manter</div>
+    <div class="card orange">🔥 Controle alimentar sem loucura</div>
+    <div class="card green">⚡ Mais energia no dia a dia</div>
+    <div class="card blue">📉 Emagrecimento gradual</div>
+    <div class="card purple">🧠 Hábitos que permanecem</div>
   </div>
 </section>
 
-<!-- PROVA SOCIAL SEGURA -->
-<section class="section">
-  <h2>Por Que Esse Método Funciona</h2>
-  <div class="cards">
-    <div class="card green">📊 Baseado em organização alimentar e constância</div>
-    <div class="card blue">🧠 Foco em consciência alimentar, não restrição</div>
-    <div class="card purple">🔁 Estratégia pensada para longo prazo</div>
-  </div>
-  <p style="text-align:center; font-size:14px; color:#aaa; margin-top:25px;">
-    Resultados variam de pessoa para pessoa. Conteúdo educativo.
-  </p>
-</section>
-
-<!-- IMAGEM -->
 <section class="section image">
   <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=1400">
 </section>
 
-<!-- PRA QUEM É -->
-<section class="section">
-  <h2>Esse Método É Para Você Se:</h2>
-  <ul class="list">
-    <li>Já tentou emagrecer e não conseguiu manter</li>
-    <li>Quer algo simples, sem sofrimento</li>
-    <li>Não aguenta mais dietas malucas</li>
-    <li>Busca mudança real de hábitos</li>
-  </ul>
-</section>
-
-<!-- O QUE VOCÊ RECEBE -->
-<section class="section">
-  <h2>O Que Você Recebe</h2>
-  <div class="cards">
-    <div class="card green">📘 Ebook SlimFit completo</div>
-    <div class="card blue">🥗 Guia prático de refeições</div>
-    <div class="card orange">📆 Organização simples para o dia a dia</div>
-    <div class="card purple">🎁 Ebook bônus de receitas saudáveis</div>
-  </div>
-</section>
-
-<!-- CONFIANÇA -->
 <section class="section">
   <h2>Compra 100% Segura</h2>
   <div class="cards">
-    <div class="card orange">🔒 Pagamento seguro</div>
-    <div class="card green">✅ Garantia de 7 dias</div>
-    <div class="card blue">📱 Acesso imediato</div>
-    <div class="card purple">💬 Suporte inicial</div>
+    <div class="card orange safe">
+      <strong>🔒 Pagamento Seguro</strong>
+      Processado por plataforma confiável
+    </div>
+    <div class="card green safe">
+      <strong>✅ Garantia de 7 Dias</strong>
+      Risco zero para testar o método
+    </div>
+    <div class="card blue safe">
+      <strong>📱 Acesso Imediato</strong>
+      Receba tudo logo após o pagamento
+    </div>
+    <div class="card purple safe">
+      <strong>💬 Suporte Inicial</strong>
+      Ajuda para começar do jeito certo
+    </div>
   </div>
 </section>
 
-<!-- OFERTA -->
 <section class="section offer" id="oferta">
   <div class="price">R$ 19,90</div>
   <div class="bonus">🎁 Bônus + Garantia de 7 dias</div>
@@ -271,6 +234,10 @@ setInterval(()=>{
   c.innerHTML=`⏳ Oferta termina em ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
 },1000);
 </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
