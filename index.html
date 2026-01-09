@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f4f4f4; line-height:1.6; }
+  body { font-family: 'Roboto', sans-serif ; margin:0; padding:0; background:#f4f4f4; line-height:1.6; }
   .container { max-width: 1000px; margin:0 auto; padding:20px; }
 
   /* Banner */
@@ -28,34 +28,40 @@
     padding: 25px; 
     border-radius:15px; 
     line-height:1.2;
+    animation: fadeIn 2s ease;
   }
 
-  /* Sections */
-  .section { background:#fff; padding:40px 30px; margin-bottom:40px; border-radius:10px; box-shadow:0 0 20px rgba(0,0,0,0.1); }
+  /* Sessões */
+  .section { background:#fff; padding:40px 30px; margin-bottom:40px; border-radius:10px; box-shadow:0 0 20px rgba(0,0,0,0.1); animation: fadeInUp 1s ease-out; }
   .section h2 { color:#e67e22; text-align:center; font-size:36px; margin-bottom:20px; }
 
-  /* Benefits */
+  /* Benefícios */
   .benefits ul { list-style:none; padding:0; font-size:20px; }
   .benefits ul li { margin-bottom:15px; display:flex; align-items:center; }
   .benefits ul li::before { content:'✅'; margin-right:15px; color:#2ecc71; font-size:24px; }
 
-  /* Testimonials */
+  /* Depoimentos */
   .testimonial { display:flex; align-items:center; margin:20px 0; background:#f9f9f9; padding:20px; border-left:5px solid #2ecc71; border-radius:5px; }
   .testimonial img { width:80px; height:80px; border-radius:50%; margin-right:20px; object-fit:cover; }
   .testimonial p { font-style:italic; margin:0; }
 
-  /* Price and bonus */
+  /* Preço e CTA */
   .price { text-align:center; font-size:36px; color:#e74c3c; font-weight:bold; margin-top:20px; }
   .bonus { background:#f1c40f; padding:15px; text-align:center; font-weight:bold; border-radius:5px; margin-top:15px; font-size:18px; }
-  .button { display:block; text-align:center; width:70%; margin:20px auto; padding:20px; background:#e67e22; color:#fff; font-size:24px; text-decoration:none; border-radius:10px; font-weight:bold; transition:0.3s; }
+  .button { display:block; text-align:center; width:70%; margin:20px auto; padding:20px; background:#e67e22; color:#fff; font-size:24px; text-decoration:none; border-radius:10px; font-weight:bold; transition:0.3s; animation: pulse 1.5s infinite; }
   .button:hover { background:#d35400; }
 
-  /* Image sections */
+  /* Imagens intermediárias */
   .image { text-align:center; margin:30px 0; }
   .image img { max-width:100%; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.2); }
 
-  /* Countdown urgency */
+  /* Contagem regressiva e urgência */
   .countdown { background:#e74c3c; color:#fff; text-align:center; padding:15px; font-size:20px; border-radius:5px; margin-top:20px; }
+
+  /* Animações */
+  @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes fadeInUp { 0% { transform: translateY(20px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+  @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
 
   @media(max-width:768px) {
     .banner h1 { font-size:32px; padding:15px; }
@@ -74,7 +80,7 @@
     <h1>🔥 Emagreça Naturalmente e Transforme Seu Corpo em Apenas 30 Dias!</h1>
   </div>
 
-  <!-- Benefits -->
+  <!-- Benefícios -->
   <div class="section benefits">
     <h2>Benefícios do Método SlimFit</h2>
     <ul>
@@ -85,12 +91,12 @@
     </ul>
   </div>
 
-  <!-- Image -->
+  <!-- Imagem intermediária -->
   <div class="image">
     <img src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Transformação corporal">
   </div>
 
-  <!-- Testimonials -->
+  <!-- Depoimentos -->
   <div class="section">
     <h2>Depoimentos de quem já emagreceu</h2>
     <div class="testimonial">
@@ -103,7 +109,7 @@
     </div>
   </div>
 
-  <!-- Price and CTA -->
+  <!-- Preço e Bônus -->
   <div class="section">
     <div class="price">💰 Apenas R$19,90</div>
     <div class="bonus">🎁 Bônus: Ebook com receitas saudáveis + Garantia de 7 dias</div>
