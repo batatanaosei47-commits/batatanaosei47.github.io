@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -17,15 +17,28 @@ body{
   background:#0b0b0b;
   color:#f2f2f2;
   font-family:'Inter', sans-serif;
+  padding-bottom:160px;
 }
 
 .container{
   max-width:1100px;
   margin:auto;
   padding:30px;
-  padding-bottom:220px; /* <<< FIX DO BUG */
 }
 
+/* ANIMAÇÕES */
+@keyframes up{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes pulse{50%{transform:scale(1.07)}}
+@keyframes float{
+  0%{transform:perspective(1000px) rotateY(-18deg) translateY(0)}
+  50%{transform:perspective(1000px) rotateY(-18deg) translateY(-12px)}
+  100%{transform:perspective(1000px) rotateY(-18deg) translateY(0)}
+}
+
+/* HERO */
 .hero{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -33,26 +46,15 @@ body{
   align-items:center;
   margin-top:60px;
 }
-
 .hero h1{
   font-family:'Anton', sans-serif;
   font-size:56px;
 }
-
 .hero span{color:#f1c40f}
+.hero p{font-size:20px;color:#ccc}
+.price-tag{color:#f1c40f;font-size:22px;font-weight:800;margin:25px 0}
 
-.hero p{
-  font-size:20px;
-  color:#ccc;
-}
-
-.price-tag{
-  color:#f1c40f;
-  font-size:22px;
-  font-weight:800;
-  margin:25px 0;
-}
-
+/* BOTÃO */
 .btn{
   display:inline-block;
   padding:22px 50px;
@@ -63,61 +65,47 @@ body{
   font-weight:900;
   border-radius:16px;
   box-shadow:0 0 35px rgba(241,196,15,.8);
+  animation:pulse 1.2s infinite;
 }
 
+/* MOCKUP */
 .mockup{
   background:#111;
   padding:45px;
   border-radius:30px;
   text-align:center;
 }
-
 .ebook-3d{
   width:100%;
   max-width:300px;
   border-radius:18px;
+  animation:float 3.5s ease-in-out infinite;
+  box-shadow:20px 20px 60px rgba(0,0,0,.8);
 }
 
-.section{
-  margin-top:110px;
-}
-
+/* SEÇÕES */
+.section{margin-top:100px;animation:up 1s ease}
 .section h2{
   text-align:center;
   color:#f1c40f;
   font-size:36px;
   margin-bottom:40px;
 }
+.list{max-width:800px;margin:auto;font-size:20px}
+.list li{list-style:none;margin-bottom:18px}
+.list li::before{content:"✔ ";color:#f1c40f}
 
-.list{
-  max-width:800px;
-  margin:auto;
-  font-size:20px;
-}
-
-.list li{
-  list-style:none;
-  margin-bottom:18px;
-}
-
-.list li::before{
-  content:"✔ ";
-  color:#f1c40f;
-}
-
+/* OFERTA */
 .offer{
   background:#111;
   padding:80px 30px;
   border-radius:35px;
   text-align:center;
+  border:1px solid rgba(241,196,15,.3);
 }
+.offer .price{font-size:52px;color:#f1c40f;font-weight:900}
 
-.offer .price{
-  font-size:52px;
-  color:#f1c40f;
-  font-weight:900;
-}
-
+/* CTA */
 .cta{
   margin-top:120px;
   padding:110px 30px;
@@ -125,19 +113,10 @@ body{
   border-radius:45px;
   text-align:center;
 }
+.cta h2{font-size:42px;color:#f1c40f}
+.cta p{font-size:20px;color:#ddd;margin:25px 0 55px}
 
-.cta h2{
-  font-size:42px;
-  color:#f1c40f;
-}
-
-.cta p{
-  font-size:20px;
-  color:#ddd;
-  margin:25px 0 55px;
-}
-
-/* BOTÃO FIXO */
+/* BOTÃO FIXO MOBILE */
 .btn-fixed{
   position:fixed;
   bottom:15px;
@@ -154,18 +133,21 @@ body{
   border-radius:16px;
   text-align:center;
   box-shadow:0 0 25px rgba(241,196,15,.9);
-  z-index:9999;
+  z-index:99999;
+  animation:pulse 1.2s infinite;
 }
-
-@media(min-width:900px){
-  .btn-fixed{display:none}
+.btn-fixed.hide{
+  opacity:0;
+  pointer-events:none;
+  transform:translateX(-50%) translateY(120px);
 }
 
 @media(max-width:900px){
-  .hero{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+  .hero{grid-template-columns:1fr;text-align:center}
+  .cta{margin-bottom:140px}
+}
+@media(min-width:900px){
+  .btn-fixed{display:none}
 }
 </style>
 </head>
@@ -177,13 +159,15 @@ body{
 <section class="hero">
   <div>
     <h1>🔥 EMAGREÇA DE FORMA SIMPLES <span>30 DIAS</span></h1>
-    <p>Transforme seu corpo, energia e hábitos sem dietas malucas.</p>
+    <p>Transforme seu corpo e hábitos sem dietas malucas.</p>
     <div class="price-tag">💰 Só R$19,90 – Acesso imediato</div>
     <a href="#cta" class="btn">QUERO MEU EBOOK</a>
   </div>
 
   <div class="mockup">
-    <img src="https://great-aqua-cyuw3olton.edgeone.app/Miniatura%20do%20youtube%20desafio%20emagrecimento%20saud%C3%A1vel%20simples%20em%20branco%20e%20amarelo.png" class="ebook-3d">
+    <a href="https://pay.cakto.com.br/uz3ny5n_713376">
+      <img src="https://great-aqua-cyuw3olton.edgeone.app/Miniatura%20do%20youtube%20desafio%20emagrecimento%20saud%C3%A1vel%20simples%20em%20branco%20e%20amarelo.png" class="ebook-3d" alt="Capa Ebook">
+    </a>
   </div>
 </section>
 
@@ -197,13 +181,23 @@ body{
   </ul>
 </section>
 
+<section class="section">
+  <h2>Por Que Funciona</h2>
+  <ul class="list">
+    <li>Plano completo de 30 dias</li>
+    <li>Substituições inteligentes</li>
+    <li>Treinos rápidos</li>
+    <li>Checklist diário</li>
+  </ul>
+</section>
+
 <section class="section offer">
   <div class="price">R$ 19,90</div>
   <p>Acesso imediato • Garantia de 7 dias</p>
 </section>
 
 <section class="cta" id="cta">
-  <h2>💥 Garanta Seu Ebook Agora 💥</h2>
+  <h2>💥 Garanta Seu Ebook Agora</h2>
   <p>Cada minuto conta para sua transformação</p>
   <a href="https://pay.cakto.com.br/uz3ny5n_713376" class="btn">
     QUERO MEU EBOOK POR R$19,90
@@ -212,18 +206,27 @@ body{
 
 </div>
 
-<a href="#cta" class="btn-fixed">
+<a href="https://pay.cakto.com.br/uz3ny5n_713376" class="btn-fixed" id="btnFixed">
   QUERO MEU EBOOK AGORA
+</a>
+
 <script>
-let endTime = new Date().getTime() + 24*60*60*1000;
-let el = document.getElementById("countdown");
-setInterval(()=>{
-  let d = endTime - new Date().getTime();
-  let h = Math.floor(d/(1000*60*60));
-  let m = Math.floor((d%(1000*60*60))/(1000*60));
-  let s = Math.floor((d%(1000*60))/1000);
-  el.innerHTML = `⏳ Oferta termina em ${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
-},1000);
+const btn = document.getElementById("btnFixed");
+const cta = document.getElementById("cta");
+
+window.addEventListener("scroll", ()=>{
+  const ctaTop = cta.getBoundingClientRect().top;
+  if(ctaTop < window.innerHeight - 150){
+    btn.classList.add("hide");
+  } else {
+    btn.classList.remove("hide");
+  }
+});
+</script>
+
+</body>
+</html>
+
 </script>
 
 </body>
