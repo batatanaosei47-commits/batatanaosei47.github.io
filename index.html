@@ -2,8 +2,16 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Desafio 30 Dias — Emagrecimento Saudável</title>
+<title>Emagreça de Forma Simples — 30 Dias</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SEO / PREVIEW -->
+<meta name="description" content="Emagreça de forma simples em 30 dias. Ebook prático, sem dietas malucas. Acesso imediato por apenas R$19,90.">
+<meta property="og:title" content="🔥 Emagreça de Forma Simples – 30 Dias">
+<meta property="og:description" content="Transforme seu corpo, sua energia e seus hábitos sem radicalismos.">
+<meta property="og:image" content="https://batatanaosei47.github.io/batatanaosei47.github.io/capa-ebook.png">
+<meta property="og:url" content="https://batatanaosei47-commits.github.io/batatanaosei47.github.io/">
+<meta name="twitter:card" content="summary_large_image">
 
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;800&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -12,7 +20,7 @@
 
 body{
   margin:0;
-  background:#0a0a0a;
+  background:#0b0b0b;
   color:#f2f2f2;
   font-family:'Inter', sans-serif;
 }
@@ -23,7 +31,7 @@ body{
   padding:30px;
 }
 
-/* ANIMAÇÕES DE ENTRADA */
+/* ANIMAÇÕES */
 .fade{opacity:0;animation:fade .8s ease forwards}
 .up{opacity:0;animation:up 1s ease forwards}
 
@@ -33,28 +41,39 @@ body{
   to{opacity:1;transform:translateY(0)}
 }
 
+@keyframes pulse{
+  50%{transform:scale(1.08)}
+}
+
 /* HERO */
 .hero{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:70px;
   align-items:center;
-  margin-top:70px;
+  margin-top:60px;
 }
 
 .hero h1{
   font-family:'Anton', sans-serif;
-  font-size:64px;
-  letter-spacing:2px;
+  font-size:56px;
   line-height:1.1;
   margin-bottom:25px;
 }
+
 .hero span{color:#f1c40f}
 
 .hero p{
   font-size:20px;
   color:#dcdcdc;
-  margin-bottom:40px;
+  margin-bottom:30px;
+}
+
+.price-tag{
+  font-size:22px;
+  font-weight:800;
+  color:#f1c40f;
+  margin-bottom:35px;
 }
 
 .btn{
@@ -70,11 +89,7 @@ body{
   animation:pulse 1.3s infinite;
 }
 
-@keyframes pulse{
-  50%{transform:scale(1.08)}
-}
-
-/* MOCKUP 3D */
+/* MOCKUP */
 .mockup{
   background:#111;
   border-radius:30px;
@@ -88,17 +103,9 @@ body{
   max-width:300px;
   border-radius:18px;
   transform:perspective(1000px) rotateY(-18deg);
-  box-shadow:
-    20px 20px 60px rgba(0,0,0,.8),
-    0 0 40px rgba(241,196,15,.35);
+  box-shadow:20px 20px 60px rgba(0,0,0,.8),0 0 40px rgba(241,196,15,.35);
   animation:float 3.5s ease-in-out infinite;
-  transition:.4s;
   cursor:pointer;
-}
-
-.ebook-3d:hover{
-  transform:perspective(1000px) rotateY(0deg) scale(1.05);
-  box-shadow:0 0 60px rgba(241,196,15,.8);
 }
 
 @keyframes float{
@@ -107,48 +114,19 @@ body{
   100%{transform:perspective(1000px) rotateY(-18deg) translateY(0)}
 }
 
-.mockup-text{
-  margin-top:22px;
-  font-size:14px;
-  color:#aaa;
-}
-
 /* SEÇÕES */
-.section{margin-top:120px}
+.section{margin-top:110px}
 
 .section h2{
   text-align:center;
-  font-size:38px;
+  font-size:36px;
   color:#f1c40f;
-  margin-bottom:50px;
+  margin-bottom:45px;
   font-weight:800;
 }
 
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:25px;
-}
-
-.card{
-  background:#111;
-  padding:35px;
-  border-radius:22px;
-  font-family:'Sora', sans-serif;
-  font-size:18px;
-  line-height:1.6;
-  border:1px solid rgba(241,196,15,.25);
-  transition:.3s;
-}
-.card:hover{
-  transform:translateY(-8px);
-  border-color:#f1c40f;
-}
-
-/* LISTA */
 .list{
-  max-width:760px;
+  max-width:800px;
   margin:auto;
   font-size:20px;
 }
@@ -165,36 +143,39 @@ body{
 /* OFERTA */
 .offer{
   background:#111;
-  padding:75px 30px;
-  border-radius:34px;
+  padding:80px 30px;
+  border-radius:35px;
   text-align:center;
   border:1px solid rgba(241,196,15,.35);
 }
 
-.price{
-  font-size:52px;
+.offer .price{
+  font-size:54px;
   font-weight:900;
   color:#f1c40f;
 }
 
-.bonus{
-  margin-top:20px;
-  font-size:18px;
-  color:#cfcfcf;
+/* COUNTDOWN */
+.countdown{
+  margin-top:30px;
+  text-align:center;
+  font-size:20px;
+  font-weight:800;
+  color:#f1c40f;
 }
 
 /* CTA FINAL */
 .cta{
-  margin-top:140px;
-  padding:110px 30px;
+  margin-top:130px;
+  padding:120px 30px;
   background:radial-gradient(circle at top,#5a0f0f,#000);
   border-radius:45px;
   text-align:center;
-  box-shadow:0 0 100px rgba(241,196,15,.5);
+  box-shadow:0 0 100px rgba(241,196,15,.55);
 }
 
 .cta h2{
-  font-size:44px;
+  font-size:42px;
   color:#f1c40f;
   margin-bottom:25px;
 }
@@ -217,17 +198,30 @@ body{
   animation:pulse 1.3s infinite;
 }
 
-.cta span{
-  display:block;
-  margin-top:35px;
-  font-size:15px;
-  color:#aaa;
+/* BOTÃO FIXO MOBILE */
+.btn-fixed{
+  position:fixed;
+  bottom:15px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:18px 32px;
+  font-size:20px;
+  font-weight:900;
+  background:linear-gradient(45deg,#f1c40f,#f39c12);
+  color:#000;
+  text-decoration:none;
+  border-radius:18px;
+  box-shadow:0 0 25px rgba(241,196,15,.9);
+  z-index:9999;
+  animation:pulse 1.2s infinite;
 }
 
-/* MOBILE */
+@media(min-width:900px){
+  .btn-fixed{display:none;}
+  .hero{grid-template-columns:1fr 1fr;}
+}
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;text-align:center}
-  .hero h1{font-size:42px}
 }
 </style>
 </head>
@@ -235,65 +229,75 @@ body{
 <body>
 <div class="container">
 
-<!-- HERO -->
 <section class="hero fade">
   <div>
-    <h1 class="up">DESAFIO <span>30 DIAS</span></h1>
-    <p class="up">
-      Um método simples e possível para quem quer emagrecer de forma saudável,
-      sem dietas extremas.
-    </p>
-    <a href="#cta" class="btn up">COMEÇAR AGORA</a>
+    <h1 class="up">🔥 EMAGREÇA DE FORMA SIMPLES <span>30 DIAS</span></h1>
+    <p class="up">Transforme seu corpo, sua energia e seus hábitos sem dietas malucas.</p>
+    <div class="price-tag up">💰 Só R$19,90 — Acesso imediato!</div>
+    <a href="#cta" class="btn up">QUERO MEU EBOOK</a>
   </div>
 
   <div class="mockup up">
     <a href="https://pay.cakto.com.br/uz3ny5n_713376">
-      <img src="https://great-aqua-cyuw3olton.edgeone.app/Miniatura%20do%20youtube%20desafio%20emagrecimento%20saud%C3%A1vel%20simples%20em%20branco%20e%20amarelo.png" alt="Capa do Ebook Desafio 30 Dias" class="ebook-3d">
+      <img src="https://great-aqua-cyuw3olton.edgeone.app/Miniatura%20do%20youtube%20desafio%20emagrecimento%20saud%C3%A1vel%20simples%20em%20branco%20e%20amarelo.png" class="ebook-3d" alt="Capa Ebook">
     </a>
-    <p class="mockup-text">📘 Clique na capa para acessar agora</p>
   </div>
 </section>
 
-<!-- BENEFÍCIOS -->
 <section class="section up">
   <h2>O Que Você Vai Conquistar</h2>
-  <div class="cards">
-    <div class="card">🔥 Controle alimentar sem sofrimento</div>
-    <div class="card">⚡ Mais energia no dia a dia</div>
-    <div class="card">📉 Emagrecimento gradual e real</div>
-    <div class="card">🧠 Hábitos que permanecem</div>
-  </div>
-</section>
-
-<!-- PRA QUEM É -->
-<section class="section up">
-  <h2>Esse Desafio É Para Você Se</h2>
   <ul class="list">
-    <li>Já tentou emagrecer várias vezes</li>
-    <li>Quer algo simples de seguir</li>
-    <li>Não aguenta mais dietas restritivas</li>
-    <li>Quer mudança de verdade</li>
+    <li>Reduzir medidas sem sofrimento</li>
+    <li>Comer bem sem cortar tudo que gosta</li>
+    <li>Exercícios simples e eficazes</li>
+    <li>Hábitos que duram para sempre</li>
   </ul>
 </section>
 
-<!-- OFERTA -->
-<section class="section offer up">
-  <div class="price">R$ 19,90</div>
-  <div class="bonus">✔ Ebook completo • ✔ Bônus extras • ✔ Garantia de 7 dias</div>
+<section class="section up">
+  <h2>Por Que Funciona</h2>
+  <ul class="list">
+    <li>Plano completo de 30 dias</li>
+    <li>Substituições inteligentes</li>
+    <li>Treinos curtos em casa</li>
+    <li>Checklist diário</li>
+  </ul>
 </section>
 
-<!-- CTA FINAL -->
+<section class="section offer up">
+  <div class="price">R$ 19,90</div>
+  <p>Acesso imediato • Ebook completo • Garantia de 7 dias</p>
+  <p style="font-size:14px;color:#aaa">Conteúdo educativo • Resultados variam</p>
+</section>
+
+<div id="countdown" class="countdown"></div>
+
 <section class="cta up" id="cta">
-  <h2>Comece Hoje Mesmo</h2>
-  <p>Acesso imediato após a compra.<br>Sem risco.</p>
+  <h2>💥 Garanta Seu Ebook Agora 💥</h2>
+  <p>Cada minuto conta para sua transformação.</p>
   <a href="https://pay.cakto.com.br/uz3ny5n_713376">
-    QUERO MEU EBOOK AGORA
+    QUERO MEU EBOOK POR R$19,90 AGORA
   </a>
-  <span>🔒 Pagamento seguro • 📱 Acesso imediato • ✅ Garantia</span>
 </section>
 
 </div>
+
+<a href="#cta" class="btn-fixed">QUERO MEU EBOOK AGORA</a>
+
+<script>
+let endTime = new Date().getTime() + 24*60*60*1000;
+let el = document.getElementById("countdown");
+setInterval(()=>{
+  let d = endTime - new Date().getTime();
+  let h = Math.floor(d/(1000*60*60));
+  let m = Math.floor((d%(1000*60*60))/(1000*60));
+  let s = Math.floor((d%(1000*60))/1000);
+  el.innerHTML = `⏳ Oferta termina em ${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+},1000);
+</script>
+
 </body>
 </html>
+
 
 
