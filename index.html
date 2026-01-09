@@ -12,68 +12,55 @@
 
 body{
   margin:0;
-  background:#0a0a0a;
+  background:#0b0b0b;
   color:#eaeaea;
   font-family:'Inter', sans-serif;
-  overflow-x:hidden;
 }
 
 .container{
-  max-width:1200px;
+  max-width:1100px;
   margin:auto;
-  padding:25px;
+  padding:30px;
 }
 
-/* ANIMAÇÕES GLOBAIS */
-.fade-up{animation:fadeUp 1s ease forwards; opacity:0}
-.fade-in{animation:fadeIn 1.2s ease forwards; opacity:0}
-.zoom-in{animation:zoomIn 1s ease forwards; opacity:0}
+/* ANIMAÇÕES */
+.fade{opacity:0; animation:fade .9s ease forwards}
+.up{opacity:0; animation:up 1s ease forwards}
 
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(40px)}
-  to{opacity:1; transform:translateY(0)}
-}
-@keyframes fadeIn{
-  from{opacity:0}
+@keyframes fade{
   to{opacity:1}
 }
-@keyframes zoomIn{
-  from{opacity:0; transform:scale(.85)}
-  to{opacity:1; transform:scale(1)}
+@keyframes up{
+  from{opacity:0; transform:translateY(40px)}
+  to{opacity:1; transform:translateY(0)}
 }
 
 /* HERO */
 .hero{
-  background:
-    linear-gradient(120deg,rgba(0,0,0,.92),rgba(0,0,0,.4)),
-    url('https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?auto=compress&cs=tinysrgb&w=1600');
-  background-size:cover;
-  background-position:center;
-  border-radius:26px;
-  padding:150px 30px;
-  text-align:center;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+  margin-top:60px;
 }
 
 .hero h1{
   font-family:'Anton', sans-serif;
-  font-size:72px;
+  font-size:64px;
   letter-spacing:2px;
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
 .hero span{color:#2ecc71}
 
 .hero p{
   font-size:20px;
-  max-width:750px;
-  margin:auto;
   color:#cfcfcf;
+  margin-bottom:40px;
 }
 
-/* BOTÃO */
 .btn{
   display:inline-block;
-  margin-top:45px;
-  padding:22px 55px;
+  padding:22px 50px;
   background:linear-gradient(45deg,#2ecc71,#1abc9c);
   color:#000;
   text-decoration:none;
@@ -81,65 +68,71 @@ body{
   font-weight:900;
   border-radius:16px;
   box-shadow:0 0 35px rgba(46,204,113,.7);
-  animation:pulse 1.4s infinite;
+  animation:pulse 1.3s infinite;
 }
 
 @keyframes pulse{
-  0%{transform:scale(1)}
   50%{transform:scale(1.08)}
-  100%{transform:scale(1)}
+}
+
+/* MOCKUP */
+.mockup{
+  background:#111;
+  border-radius:28px;
+  padding:40px;
+  text-align:center;
+  box-shadow:0 0 60px rgba(46,204,113,.25);
+}
+
+.mockup img{
+  width:100%;
+  max-width:320px;
 }
 
 /* SEÇÕES */
-.section{margin-top:100px}
+.section{
+  margin-top:110px;
+}
+
 .section h2{
   text-align:center;
-  font-size:40px;
-  margin-bottom:50px;
+  font-size:38px;
   color:#2ecc71;
+  margin-bottom:50px;
   font-weight:800;
 }
 
 /* CARDS */
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:25px;
 }
 
 .card{
-  padding:38px;
+  background:#111;
+  padding:35px;
   border-radius:22px;
+  font-family:'Sora', sans-serif;
   font-size:18px;
   line-height:1.6;
-  box-shadow:0 0 35px rgba(0,0,0,.8);
-  font-family:'Sora', sans-serif;
-  font-weight:600;
+  border:1px solid rgba(46,204,113,.25);
   transition:.3s;
 }
-.card:hover{transform:translateY(-8px)}
-
-.orange{background:linear-gradient(135deg,#ff8c1a,#ff5500);color:#000}
-.green{background:linear-gradient(135deg,#2ecc71,#1abc9c);color:#000}
-.blue{background:linear-gradient(135deg,#3498db,#2980b9);color:#fff}
-.purple{background:linear-gradient(135deg,#9b59b6,#8e44ad);color:#fff}
-
-/* IMAGEM */
-.image img{
-  width:100%;
-  border-radius:28px;
-  box-shadow:0 0 70px rgba(46,204,113,.35);
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#2ecc71;
 }
 
 /* LISTA */
 .list{
-  max-width:850px;
+  max-width:750px;
   margin:auto;
   font-size:20px;
 }
 .list li{
-  margin-bottom:18px;
   list-style:none;
+  margin-bottom:18px;
 }
 .list li::before{
   content:"✔ ";
@@ -150,79 +143,68 @@ body{
 /* OFERTA */
 .offer{
   background:#111;
-  padding:80px 30px;
-  border-radius:32px;
+  padding:70px 30px;
+  border-radius:30px;
   text-align:center;
+  border:1px solid rgba(46,204,113,.3);
 }
+
 .price{
   font-size:52px;
   font-weight:900;
   color:#2ecc71;
 }
+
 .bonus{
-  margin-top:25px;
-  background:linear-gradient(45deg,#2ecc71,#1abc9c);
-  padding:24px;
-  font-weight:800;
-  border-radius:16px;
-  color:#000;
+  margin-top:20px;
+  font-size:18px;
+  color:#cfcfcf;
 }
 
 /* CTA FINAL */
-.cta-final{
+.cta{
   margin-top:120px;
-  padding:110px 30px;
+  padding:100px 30px;
   background:radial-gradient(circle at top,#0f3d2e,#000);
+  border-radius:40px;
   text-align:center;
-  border-radius:36px;
-  box-shadow:0 0 100px rgba(46,204,113,.45);
+  box-shadow:0 0 90px rgba(46,204,113,.45);
 }
 
-.cta-final h2{
-  font-size:46px;
+.cta h2{
+  font-size:44px;
   color:#2ecc71;
   margin-bottom:25px;
-  font-weight:900;
 }
 
-.cta-final p{
+.cta p{
   font-size:20px;
-  color:#dcdcdc;
-  margin-bottom:55px;
+  color:#ddd;
+  margin-bottom:50px;
 }
 
-.cta-btn{
-  display:inline-block;
-  padding:30px 75px;
+.cta a{
+  padding:28px 70px;
   font-size:26px;
   font-weight:900;
-  color:#000;
-  text-decoration:none;
   border-radius:22px;
   background:linear-gradient(45deg,#2ecc71,#1abc9c);
-  box-shadow:
-    0 0 35px rgba(46,204,113,.9),
-    0 0 80px rgba(46,204,113,.6);
-  animation:ctaPulse 1.3s infinite;
+  color:#000;
+  text-decoration:none;
+  box-shadow:0 0 40px rgba(46,204,113,.9);
+  animation:pulse 1.3s infinite;
 }
 
-@keyframes ctaPulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.12)}
-  100%{transform:scale(1)}
-}
-
-.cta-sub{
+.cta span{
   display:block;
   margin-top:35px;
   font-size:15px;
   color:#aaa;
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;text-align:center}
   .hero h1{font-size:42px}
-  .section h2{font-size:30px}
-  .cta-final h2{font-size:32px}
 }
 </style>
 </head>
@@ -231,60 +213,61 @@ body{
 <div class="container">
 
 <!-- HERO -->
-<section class="hero fade-in">
-  <h1 class="fade-up">EMAGREÇA COM <span>CONTROLE</span></h1>
-  <p class="fade-up">Método simples, realista e sustentável para perder peso sem dietas extremas.</p>
-  <a href="#cta" class="btn zoom-in">COMEÇAR AGORA</a>
-</section>
+<section class="hero fade">
+  <div>
+    <h1 class="up">EMAGREÇA COM <span>CONTROLE</span></h1>
+    <p class="up">Um método simples, direto e possível de seguir para quem quer perder peso sem dietas extremas.</p>
+    <a href="#cta" class="btn up">COMEÇAR AGORA</a>
+  </div>
 
-<!-- BENEFÍCIOS -->
-<section class="section fade-up">
-  <h2>O Que Você Ganha</h2>
-  <div class="cards">
-    <div class="card orange zoom-in">🔥 Controle alimentar sem loucura</div>
-    <div class="card green zoom-in">⚡ Mais energia no dia a dia</div>
-    <div class="card blue zoom-in">📉 Emagrecimento constante</div>
-    <div class="card purple zoom-in">🧠 Hábitos duradouros</div>
+  <div class="mockup up">
+    <!-- COLOCA A IMAGEM DO SEU EBOOK AQUI -->
+    <img src="capa-ebook.png" alt="Capa do Ebook SlimFit">
+    <p style="margin-top:20px;color:#aaa;font-size:14px">
+      📘 Acesso imediato após a compra
+    </p>
   </div>
 </section>
 
-<!-- IMAGEM NOVA -->
-<section class="section image fade-in">
-  <img src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=1600">
+<!-- BENEFÍCIOS -->
+<section class="section up">
+  <h2>O Que Você Vai Ganhar</h2>
+  <div class="cards">
+    <div class="card">🔥 Controle alimentar sem sofrimento</div>
+    <div class="card">⚡ Mais energia e disposição</div>
+    <div class="card">📉 Emagrecimento gradual e real</div>
+    <div class="card">🧠 Hábitos que duram</div>
+  </div>
 </section>
 
 <!-- PRA QUEM É -->
-<section class="section fade-up">
-  <h2>Esse Método É Para Você</h2>
+<section class="section up">
+  <h2>Esse Ebook É Pra Você Se</h2>
   <ul class="list">
     <li>Já tentou emagrecer várias vezes</li>
-    <li>Quer algo simples e possível</li>
-    <li>Não aguenta mais dietas extremas</li>
-    <li>Busca mudança real</li>
+    <li>Quer algo simples de seguir</li>
+    <li>Não aguenta mais dietas restritivas</li>
+    <li>Quer mudar de verdade</li>
   </ul>
 </section>
 
-<!-- IMAGEM 2 NOVA -->
-<section class="section image fade-in">
-  <img src="https://images.pexels.com/photos/3768730/pexels-photo-3768730.jpeg?auto=compress&cs=tinysrgb&w=1600">
-</section>
-
 <!-- OFERTA -->
-<section class="section offer zoom-in">
+<section class="section offer up">
   <div class="price">R$ 19,90</div>
-  <div class="bonus">🎁 Ebook + Bônus Exclusivos + Garantia 7 dias</div>
+  <div class="bonus">✔ Ebook completo • ✔ Bônus extras • ✔ Garantia de 7 dias</div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="cta-final fade-up" id="cta">
-  <h2>Comece Sua Transformação Agora</h2>
-  <p>Acesso imediato ao método SlimFit.<br>Simples, direto e possível.</p>
-  <a href="https://pay.cakto.com.br/uz3ny5n_713376" class="cta-btn">
+<!-- CTA -->
+<section class="cta up" id="cta">
+  <h2>Comece Hoje</h2>
+  <p>Você não precisa esperar mais.<br>O acesso é imediato.</p>
+  <a href="https://pay.cakto.com.br/uz3ny5n_713376">
     QUERO MEU EBOOK AGORA
   </a>
-  <span class="cta-sub">🔒 Compra segura • 📱 Acesso imediato • ✅ Garantia</span>
+  <span>🔒 Pagamento seguro • 📱 Acesso imediato • ✅ Garantia</span>
 </section>
 
 </div>
 </body>
 </html>
+
